@@ -1,12 +1,7 @@
 import { createUser } from "../action/user";
+import UsersItem from "../component/UsersItem";
 import styles from "./styles.module.css"
-interface User {
-  "id": number,
-  "fname": string,
-  "lname": string,
-  "username": string,
-  "avatar": string
-}
+
 const getData = async () => {
   try {
     const res = await fetch("https://www.melivecode.com/api/users", { cache: "no-store" })
@@ -19,6 +14,7 @@ const getData = async () => {
   }
 
 }
+
 async function Users() {
   const data = await getData();
 
@@ -28,11 +24,7 @@ async function Users() {
       <div className={styles.wrapper}>
         <div>
           {data.error ? data.error :
-            data.map((user: User, i: number) => (
-              <div key={user.id}>
-                <p>{user.username}</p>
-              </div>
-            ))
+            <UsersItem data={data} />
           }
         </div>
         <div>

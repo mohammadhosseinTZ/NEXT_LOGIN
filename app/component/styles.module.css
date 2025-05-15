@@ -1,0 +1,66 @@
+.button{
+    background-color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+.edit{
+    border: none;
+    background-color: #74ffbe;
+    padding: 5px;
+    cursor: pointer;
+}
+.modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    background-color: white;
+    padding: 30px;
+    width: 30vw;
+}
+.modal form h2{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.modal form label{ 
+    font-size: 20px;
+}
+.modal form input{
+    padding: 13px;
+}
+.modal form button[type="submit"]{
+    cursor: pointer;
+    background-color: coral;
+    padding: 14px;
+    color: black;
+    border: none;
+    margin-left: 10px;
+}
+.modal form button.close{
+    margin-right: auto;
+    display: inline;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.btns :is(a , button){
+    display: inline-block;
+    border: none;
+    padding: 2px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btns button{
+    background-color: black;
+    color: white;
+}
+.btns a{
+    background-color: white;
+}

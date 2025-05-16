@@ -13,3 +13,13 @@ body{
     font-weight: 600;
     border-bottom: 5px solid black;
 }
+.links{
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.links a{
+    color: black;
+    font-size: 16px;
+}
